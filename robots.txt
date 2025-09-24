@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chukwunonsodavidilonze.ictlagos.com/sitemap.xml

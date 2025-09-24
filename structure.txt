@@ -3,6 +3,8 @@ personal-site/
 ├── app.py
 ├── requirements.txt
 ├── README.md
+├── sitemap.xml
+├── robots.txt
 ├── __pycache__/
 ├── venv/
 
