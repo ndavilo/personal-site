@@ -1,0 +1,17 @@
+personal-site/
+├── .gitignore
+├── app.py
+├── requirements.txt
+├── README.md
+├── __pycache__/
+├── venv/
+
+├── data/
+│   └── projects.csv
+
+├── templates/
+│   └── index.html
+
+├── static/
+│   ├── style.css
+│   └── D.ico
