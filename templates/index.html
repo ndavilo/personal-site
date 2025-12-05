@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,84 +37,97 @@
         <p><strong>Email:</strong> nonsoilonze@gmail.com</p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chukwunonso-ilonze/" target="_blank">linkedin.com/in/chukwunonso-ilonze</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/ndavilo" target="_blank">github.com/ndavilo</a></p>
+        <p><strong>Credly:</strong> <a href="https://www.credly.com/users/chukwunonso-david-ilonze" target="_blank">credly.com/users/chukwunonso-david-ilonze</a></p>
     </div>
 
     <section>
         <h2>Professional Profile</h2>
-        <p>I am a highly skilled Electronic Engineering graduate with over 4 years of experience in IT, Network Security, Software Development, and IT Solutions Architecture. As a registered Engineering Personnel with COREN and a Member of the Nigerian Society of Engineers (MNSE), I bring certified expertise in cybersecurity (ISC2 CC) and AWS cloud technologies to deliver innovative solutions across multiple domains.</p>
+        <p>I am a highly skilled Electrical and Electronic Engineer with over 7 years of experience across diverse domains, including IT solutions, network security, software development, artificial intelligence, database engineering, and solar energy systems. A registered Engineering Professional with COREN and a Member of the Nigerian Society of Engineers (MNSE), I bring certified expertise in cybersecurity (ISC2 CC) and AWS cloud technologies, enabling me to deliver secure, innovative, and scalable solutions across multiple sectors.</p>
         
+        <!-- Dynamic Certifications -->
         <div class="certifications">
-            <span class="cert-badge">ISC2 Certified in Cybersecurity (CC)</span>
-            <span class="cert-badge">AWS Certified Developer - Associate</span>
-            <span class="cert-badge">AWS Certified Solutions Architect - Associate</span>
-            <span class="cert-badge">AWS Certified Cloud Practitioner</span>
+            {% for cert in certifications %}
+            <span class="cert-badge">{{ cert.certification }} – {{ cert.institution }}</span>
+            {% endfor %}
+        </div>
+
+        <!-- Dynamic Education Section -->
+        <h2>Educational Background</h2>
+        <div class="services-container">
+            {% for edu in education %}
+            <div class="service-card">
+                <h3>{{ edu.qualification }}</h3>
+                <p><strong>School:</strong> {{ edu.school }}</p>
+                <p><strong>Year:</strong> {{ edu.year }}</p>
+            </div>
+            {% endfor %}
         </div>
     </section>
 
     <section>
         <h2>Professional Services</h2>
         <div class="services-container">
-        <div class="service-card">
-                    <h3>Innovative Tech Solutions</h3>
-                    <ul>
-                        <li>Custom software development with Python</li>
-                        <li>AWS cloud architecture and serverless solutions</li>
-                        <li>Database design and optimization (MySQL, PostgreSQL, DynamoDB)</li>
-                        <li>System integration and API development</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Full Software Development Lifecycle</h3>
-                    <ul>
-                        <li>Requirement analysis and system design</li>
-                        <li>Agile development methodologies</li>
-                        <li>Quality assurance and testing</li>
-                        <li>Deployment and maintenance</li>
-                        <li>Documentation and training</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>IT Infrastructure Solutions</h3>
-                    <ul>
-                        <li>Network design and security implementation</li>
-                        <li>Server management and maintenance</li>
-                        <li>VPN and firewall configuration</li>
-                        <li>Cybersecurity assessments and hardening</li>
-                        <li>Surveillance technology implementation</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Solar Energy Engineering</h3>
-                    <ul>
-                        <li>Residential and commercial solar system design</li>
-                        <li>Energy optimization solutions</li>
-                        <li>Solar installation supervision</li>
-                        <li>Hybrid system integration</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>IoT Automation Solutions</h3>
-                    <ul>
-                        <li>Smart device integration</li>
-                        <li>Industrial automation systems</li>
-                        <li>Sensor networks and data collection</li>
-                        <li>Remote monitoring solutions</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Automated Farming Systems</h3>
-                    <ul>
-                        <li>Precision agriculture solutions</li>
-                        <li>Irrigation automation</li>
-                        <li>Crop monitoring systems</li>
-                        <li>Smart water management with IoT</li>
-                    </ul>
-                </div>   
+            <div class="service-card">
+                <h3>Innovative Tech Solutions</h3>
+                <ul>
+                    <li>Custom software development with Python</li>
+                    <li>AWS cloud architecture and serverless solutions</li>
+                    <li>Database design and optimization (MySQL, PostgreSQL, DynamoDB)</li>
+                    <li>System integration and API development</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Full Software Development Lifecycle</h3>
+                <ul>
+                    <li>Requirement analysis and system design</li>
+                    <li>Agile development methodologies</li>
+                    <li>Quality assurance and testing</li>
+                    <li>Deployment and maintenance</li>
+                    <li>Documentation and training</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>IT Infrastructure Solutions</h3>
+                <ul>
+                    <li>Network design and security implementation</li>
+                    <li>Server management and maintenance</li>
+                    <li>VPN and firewall configuration</li>
+                    <li>Cybersecurity assessments and hardening</li>
+                    <li>Surveillance technology implementation</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Solar Energy Engineering</h3>
+                <ul>
+                    <li>Residential and commercial solar system design</li>
+                    <li>Energy optimization solutions</li>
+                    <li>Solar installation supervision</li>
+                    <li>Hybrid system integration</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>IoT Automation Solutions</h3>
+                <ul>
+                    <li>Smart device integration</li>
+                    <li>Industrial automation systems</li>
+                    <li>Sensor networks and data collection</li>
+                    <li>Remote monitoring solutions</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Automated Farming Systems</h3>
+                <ul>
+                    <li>Precision agriculture solutions</li>
+                    <li>Irrigation automation</li>
+                    <li>Crop monitoring systems</li>
+                    <li>Smart water management with IoT</li>
+                </ul>
+            </div>   
         </div>
     </section>
 
